@@ -1,0 +1,411 @@
+.cf:before,
+.cf:after {
+content: "";
+display: table;
+}
+.cf:after {
+clear: both;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+body{
+font-family: 'Roboto', sans-serif;
+margin: 0;
+}
+div.pogu-sektors-h {
+  margin: 0px auto;
+  width: 60px;
+}
+div.poga-h {
+float: left;
+margin: 0px 5px;
+height: 6px;
+width:  6px;
+border: 2px solid rgba(255,255,255,.3);
+border-radius: 50%
+}
+div.pogu-sektors-h a:hover div.poga-h{
+background-color: rgba(255,255,255,.7);
+border: 2px solid rgba(255,255,255,.7);
+}
+/*BLOKI LAPĀ SĀKUMS*/
+div.box-sektors{
+  /*background-color: grey;*/
+  width: 1280px;
+  margin: 0 auto;
+}
+/*Peldošā izvēlne sākums*/
+.box-topizvelne {
+  background-color: rgba(211,53,35,.3);
+  color: rgba(255,255,255,1);
+  font-size: 14px;
+  font-weight: 300;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.box-topizvelne ul.men-h {
+  /*background-color: yellow;*/
+  list-style-type: none;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.box-topizvelne li.left {
+  float: left;
+}
+.box-topizvelne li.right {
+  float:right;
+}
+.box-topizvelne img.pic-logo-v {
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.box-topizvelne .txt-logo {
+  display: block;
+  padding: 25px 10px;
+}
+.box-topizvelne a {
+  width: 80px;
+  display: block;
+  padding: 20px 2px 25px 2px;
+  text-decoration: none;
+  color: rgba(255,255,255,1);
+  border-top: 5px solid  rgba(255,255,255,0);
+  text-align: center;
+}
+.box-topizvelne li.right a:hover {
+    border-top-color:  rgba(255,255,255,.7);
+    color: rgba(255,255,255,.7);
+}
+/*Peldošā izvēlne beigas*/
+.box-main {
+  /*background: yellow;*/
+  color: #ffffff;
+}/*Sarkanais 1.bloks sākums*/
+.box-red1 {
+  background-color: rgba(211,53,35,1);
+  background-image: url("grafika/REDbg-01.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.box-red1 .box-tonis {
+  height: 800px;
+  background-color: rgba(211,53,35,.3);
+}
+.box-red1 .box-sektors{
+  height: 800px;
+}
+.box-red1 .pic-logo-h{
+  width: 918px;
+  margin: 240px auto 0 auto;
+}
+.box-red1 p.txt-1{
+  display: block;
+  width: 930px;
+  margin: 50px auto 0 auto;;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align:center;
+  }
+/*Sarkanais 1.bloks beigas*/
+
+/*Sarkanais 2.bloks sākums*/
+.box-red2 {
+  height: 550px;
+  background-color: rgba(211,53,35,1);
+}
+.box-red2 h3{
+  padding: 70px 0 35px 0;
+}
+.box-sektors-apraksti {
+  /*background-color: yellow;*/
+  width: 1180px;
+  margin: 0 auto;
+}
+.box-red2 div.box-apraksts {
+  /*background-color: blue;*/
+  height: 400px;
+  width: 231px;
+  float: left;
+  margin: 0px 32px;
+}
+.box-red2 .box-apraksts .box-grafika{
+  width: 100px;
+  margin: 0 auto;
+}
+.box-red2 .box-apraksts h4{
+  padding-top: 15px;
+}
+.box-red2 .box-apraksts p{
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align:center;
+}
+/*Sarkanais 2.bloks beigas*/
+
+/*Zaļais 1.bloks sākums*/
+.box-green1 {
+  background-color: rgba(87,170,104,1);
+  background-image: url("grafika/GREENBg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.box-green1 .box-tonis {
+  height: 360px;
+  background-color: rgba(87,170,104,.3);
+}
+.box-green1 .box-sektors{
+  height: 360px;
+}
+.box-green1 h3{
+  padding: 70px 0 50px 0;
+}
+.box-green1 p.txt-1{
+  display: block;
+  width: 940px;
+  margin: 0 auto;;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align:center;
+  }
+.box-green1 .menu-sektors {
+  margin: 40px auto 0px auto;
+  width: 800px;
+}
+.box-green1 .box-menu {
+    float: left;
+    text-align: center;
+    width: 160px;
+}
+.box-green1 .box-menu span{
+  display: inline-block;
+  padding: 6px 10px;
+  border: 2px solid rgba(255,255,255,0);
+  border-radius: 7px;
+  color: rgba(255,255,255,1);
+  font-size: 14px;
+}
+.box-green1 .box-menu a:hover span{
+  color: rgba(255,255,255,.7);
+  border: 2px solid rgba(255,255,255,.7);
+}
+.box-green1 div.pogu-sektors-h{
+  margin-top: 20px;
+}
+/*Zaļais 1.bloks beigas*/
+
+/*Zaļais 2.bloks (fotogalerija) sākums*/
+.box-green2 {
+  background-color: rgba(87,170,104,1);
+}
+.box-green2 .box-tonis {
+  background-color: rgba(87,170,104,.3);
+}
+.box-green2 .box-foto {
+  height: 300px;
+  width: 320px;
+  float: left;
+ }
+.box-green2 .box-ringtxt{
+  height: 300px;
+  width: 320px;
+  opacity: 0;
+  font-size: 18px;
+  text-align: center;
+  /*background-color: rgba(87,170,104,1)*/
+}
+.box-green2 .box-ringtxt:hover {
+  background-color: rgba(87,170,104,.7);
+  opacity: 1;
+}
+.box-green2 .box-ringtxt span{
+  font-size: 14px;
+  font-weight: 300;
+}
+.box-green2 .box-topatstarpe{
+  padding-top: 90px;
+}
+
+/*rimbuļi*/
+.box-green2 .box-r1, .box-r2, .box-r3, .box-r4{
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+}
+.box-green2 .box-r1{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 35px auto;
+}
+.box-green2 .box-r2{
+  width: 28px;
+  height: 28px;
+  margin: 5px auto;
+}
+.box-green2 .box-r3{
+  width: 16px;
+  height: 16px;
+  margin: 5px auto;
+}
+.box-green2 .box-r4{
+  width: 4px;
+  height: 4px;
+  margin: 5px auto;
+}
+/*rimbuļi beigas*/
+/*Zaļais 2.bloks (fotogalerija) beigas*/
+
+/*Zaļais 3.bloks*/
+.box-green3 {
+  height: 790px;
+  background-color: rgba(97,180,114,1);
+}
+.box-green3 h3{
+  padding: 70px 0 50px 0;
+}
+.box-green3 p.txt-1{
+  display: block;
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.box-green3 div.pogu-sektors-h{
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+.box-green3 .box-sektors-apraksti {
+  /*background-color: yellow;*/
+  width: 1200px;
+  margin: 0 auto;
+}
+.box-green3 .box-apraksts{
+  /*background-color: blue;*/
+  float: left;
+  margin: 0 15px;
+  text-align: center;
+}
+.box-green3 .box-foto{
+  width: 270px;
+  height: 300px;
+}
+/*.box-green3 .box-fotoinform{
+  width: 270px;
+  height: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(87,170,104,.7)
+}*/
+.box-green3 span.txt-darbinieks{
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.box-green3 span.txt-amats{
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: .7;
+}
+/*Zaļais 3.bloks beigas*/
+
+/*Zilais 1.bloks sākums*/
+.box-blue1 {
+  background-color: rgba(87,170,104,1);
+  background-image: url("grafika/BLUEBg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.box-blue1 .box-tonis {
+  height: 600px;
+  background-color: rgba(46,45,107,.3);
+}
+.box-blue1 .box-sektors{
+  height: 600px;
+}
+.box-blue1 h3{
+  padding: 70px 0 30px 0;
+}
+.box-blue1 form{
+  /*background-color: yellow;*/
+  width: 620px;
+  margin: 0 auto;
+}
+.box-blue1 input[type=text] {
+  width: 600px;
+  padding: 10px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  color: rgba(255,255,255,1);
+  background-color: rgba(46,45,107,1);
+  font-size: 13px;
+  opacity: .7;
+}
+.box-blue1 textarea {
+  width: 600px;
+  padding: 10px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  color: rgba(255,255,255,1);
+  background-color: rgba(46,45,107,1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  opacity: .7;
+  resize: none;
+}
+.box-blue1 input[type=submit] {
+  width: 100%;
+  padding: 10px 10px;
+  margin: 2px 0;
+  color: rgba(255,255,255,1);
+  background-color: rgba(46,45,107,0);
+  border: 1px solid rgba(255,255,255,1);
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.box-blue1 p {
+  padding-top: 35px;
+  font-size: 21px;
+  display: block;
+  text-align: center;
+}
+/*Zilais 1.bloks beigas*/
+
+/*Zilais 2.bloks (karte) sākums*/
+.box-blue2 {
+  height: 640px;
+  background-color: rgba(46,45,107,1);
+}
+/*Zilais 2.bloks (karte) beigas*/
+
+/*Projekta beigas*/
