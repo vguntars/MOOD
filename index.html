@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>MOOD sākuma lapa</title>
+<link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="index_main.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -23,34 +25,41 @@
   </div>
 </div>
 <!-- Peldošā izvēlne beigas -->
-<div class="box-main cf">
+
 <!-- Sarkanais 1.bloks sākums -->
 <div class="box-red1 cf">
 <div class="box-tonis cf">
 <div class="box-sektors cf">
-  <div class="pic-logo-h">
+  <div class="pogu-sektors-v cf">
+     <button class="poga-v"></button>
+     <button class="poga-v"></button>
+     <button class="poga-v"></button>
+  </div>
+  <div class="box-logo-h">
     <img src="grafika\logoH-01.png" alt="MOOD logo lielais" />
   </div>
   <p class="txt-1">
     Mēs ticam, ka esam paveikuši savu darbu labi, ja klients iegūst efektīvu un viegli lietojamu instrumentu – vai tas būtu mājas lapas prototips, makets, logotips – kas palīdz sasniegt nepieciešamo rezultātu – pārdot preci, izglītot, izklaidēt vai informēt
-  </p>
-  <h2>
-    !!! SOCIĀLĀS IKONAS !!!
-  <h2>
+  <div class="box-socikonas cf">
+    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+  </div>
 </div>
 </div>
 </div>
 <!-- Sarkanais 1.bloks beigas -->
 <!-- Sarkanais 2.bloks sākums -->
-<div id="pakalpojumi" class="box-red2">
-<div class="box-sektors cf ">
+<div id="pakalpojumi" class="box-red2 cf">
+<div class="box-sektors cf">
   <h3>PAKALPOJUMI</h3>
   <div class="box-sektors-apraksti cf">
 
     <!-- 1 -->
-    <div class="box-apraksts">
+    <div class="box-apraksts cf">
       <div class="box-grafika">
-        <img src="grafika/brush.png" alt="grafika ota" />
+        <img src="grafika-svg/brush.svg" alt="grafika ota" />
       </div>
       <h4>GRAFISKAIS DIZAINS</h4>
       <p>
@@ -60,7 +69,7 @@
     <!-- 2 -->
     <div class="box-apraksts">
       <div class="box-grafika">
-        <img src="grafika/eye.png" alt="grafika acs" />
+        <img src="grafika-svg/eye.svg" alt="grafika acs" />
       </div>
       <h4>POLIGRĀFIJA</h4>
       <p>
@@ -70,7 +79,7 @@
     <!-- 3 -->
     <div class="box-apraksts">
       <div class="box-grafika">
-        <img src="grafika/UiUx.png" alt="grafika UiUx" />
+        <img src="grafika-svg/uiux.svg" alt="grafika UiUx" />
       </div>
       <h4>UI/UX DIZAINS</h4>
       <p>
@@ -80,7 +89,7 @@
     <!-- 4 -->
     <div class="box-apraksts">
       <div class="box-grafika">
-        <img src="grafika/Camera.png" alt="grafika kamera" />
+        <img src="grafika-svg/camera.svg" alt="grafika kamera" />
       </div>
       <h4>FOTO / VIDEO APSTRĀDE</h4>
       <p>
@@ -117,168 +126,209 @@
   </div>
 
   <div class="pogu-sektors-h cf">
-    <a href="#"> <div class="poga-h"></div></a>
-    <a href="#"> <div class="poga-h"></div></a>
-    <a href="#"> <div class="poga-h"></div></a>
+     <button class="poga-h"></button>
+     <button class="poga-h"></button>
+     <button class="poga-h"></button>
   </div>
 
 </div>
 </div>
 </div>
 <!-- Zaļais 1.bloks beigas -->
+
 <!-- Zaļais 2.bloks (fotogalerija) sākums -->
 <div class="box-green2 cf">
-<div class="box-tonis cf">
 <div class="box-sektors cf ">
   <!-- 1 -->
-  <div class="box-foto" style="background-image: url('foto/photo-02.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span>Fotogrāfija</span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-02.png" alt="foto-02" />
   </div>
   <!-- 2 -->
-  <div class="box-foto" style="background-image: url('foto/photo-03.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span>Fotogrāfija</span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-03.png" alt="foto-03" />
   </div>
   <!-- 3 -->
-  <div class="box-foto" style="background-image: url('foto/photo-04.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span>Fotogrāfija</span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-04.png" alt="foto-04" />
   </div>
   <!-- 4 -->
-  <div class="box-foto" style="background-image: url('foto/photo-05.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit<br>
-      <span>Fotogrāfija</span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-05.png" alt="foto-05" />
   </div>
   <!-- 5 -->
-  <div class="box-foto" style="background-image: url('foto/photo-06.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span>Fotogrāfija</span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-06.png" alt="foto-06" />
   </div>
   <!-- 6 -->
-  <div class="box-foto" style="background-image: url('foto/photo-01.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span> Fotogrāfija </span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-01.png" alt="foto-01" />
   </div>
   <!-- 7 -->
-  <div class="box-foto" style="background-image: url('foto/photo-07.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span> Fotogrāfija </span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-07.png" alt="foto-07" />
   </div>
   <!-- 8 -->
-  <div class="box-foto" style="background-image: url('foto/photo-08.png')">
-    <div class="box-ringtxt">
-      <div class="box-topatstarpe"></div>
-      <div class="box-r1"><div class="box-r2"><div class="box-r3"><div class="box-r4"></div></div></div></div>
-      Proin gravida nibh vel velit <br>
-      <span> Fotogrāfija </span>
+  <div class="box-foto">
+    <div class="box-hover">
+      <div class="box-ringtxt">
+        <div class="box-ring cf"><div><div><div><div></div></div></div></div></div>
+        Proin gravida nibh vel velit <br>
+        <span>Fotogrāfija</span>
+      </div>
     </div>
+    <img src="foto\photo-08.png" alt="foto-08" />
   </div>
-</div>
+  <!--  -->
 </div>
 </div>
 <!-- Zaļais 2.bloks (fotogalerija) beigas -->
+
 <!-- Zaļais 3.bloks sākums-->
-<div id="komanda" class="box-green3">
-<div class="box-sektors cf ">
+<div id="komanda" class="box-green3 cf">
+<div class="box-sektors cf">
   <h3>MŪSU KOMANDA</h3>
-  <p class="txt-1">
+  <p class="txt-main">
     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
   </p>
   <div class="pogu-sektors-h cf">
-    <a href="#"> <div class="poga-h"></div></a>
-    <a href="#"> <div class="poga-h"></div></a>
-    <a href="#"> <div class="poga-h"></div></a>
+     <button class="poga-h"></button>
+     <button class="poga-h"></button>
+     <button class="poga-h"></button>
   </div>
   <div class="box-sektors-apraksti cf">
 
     <!-- 1 -->
     <div class="box-apraksts cf">
       <div class="box-foto">
-        <img src="foto\01.png" alt="foto Jānis Pirmais (izpilddirektors)" />
-        <div class="box-fotoinform">
-
+        <div class="box-fotohover">
+          <span class="txt-1">Proin gravida nibh vel velit auctor aliquet</span><br>
+          <span class="txt-2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
+          <div class="box-socikonas cf">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" ;aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+          </div>
         </div>
+        <img src="foto\01.png" alt="foto Jānis Pirmais (Izpilddirektors)" />
       </div>
       <span class="txt-darbinieks">Jānis Pirmais</span>
       <span class="txt-amats">Izpilddirektors</span>
     </div>
-    <!-- 1 -->
+    <!-- 2 -->
     <div class="box-apraksts cf">
       <div class="box-foto">
-        <img src="foto\01.png" alt="foto Jānis Pirmais (izpilddirektors)" />
-        <div class="box-fotoinform">
-
+        <div class="box-fotohover">
+          <span class="txt-1">Proin gravida nibh vel velit auctor aliquet</span><br>
+          <span class="txt-2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
+          <div class="box-socikonas cf">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" ;aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+          </div>
         </div>
+        <img src="foto\02.png" alt="foto Annija Otrā (Grafiskā dizainere)" />
       </div>
-      <span class="txt-darbinieks">Jānis Pirmais</span>
-      <span class="txt-amats">Izpilddirektors</span>
+      <span class="txt-darbinieks">Annija Otrā</span>
+      <span class="txt-amats">Grafiskā dizainere</span>
     </div>
-    <!-- 1 -->
+    <!-- 3 -->
     <div class="box-apraksts cf">
       <div class="box-foto">
-        <img src="foto\01.png" alt="foto Jānis Pirmais (izpilddirektors)" />
-        <div class="box-fotoinform">
-
+        <div class="box-fotohover">
+          <span class="txt-1">Proin gravida nibh vel velit auctor aliquet</span><br>
+          <span class="txt-2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
+          <div class="box-socikonas cf">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" ;aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+          </div>
         </div>
+        <img src="foto\03.png" alt="foto Kristaps Trešais (Front-end izstrādātājs)" />
       </div>
-      <span class="txt-darbinieks">Jānis Pirmais</span>
-      <span class="txt-amats">Izpilddirektors</span>
+      <span class="txt-darbinieks">Kristaps Trešais</span>
+      <span class="txt-amats">Front-end izstrādātājs</span>
     </div>
-    <!-- 1 -->
+    <!-- 4 -->
     <div class="box-apraksts cf">
       <div class="box-foto">
-        <img src="foto\01.png" alt="foto Jānis Pirmais (izpilddirektors)" />
-        <div class="box-fotoinform">
-
+        <div class="box-fotohover">
+          <span class="txt-1">Proin gravida nibh vel velit auctor aliquet</span><br>
+          <span class="txt-2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
+          <div class="box-socikonas cf">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" ;aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+          </div>
         </div>
+        <img src="foto\04.png" alt="foto Ketija Ceturtā (UI/UX dizainere)" />
       </div>
-      <span class="txt-darbinieks">Jānis Pirmais</span>
-      <span class="txt-amats">Izpilddirektors</span>
+      <span class="txt-darbinieks">Ketija Ceturtā</span>
+      <span class="txt-amats">UI/UX dizainere</span>
     </div>
-
 
   </div>
 </div>
 </div>
 <!-- Zaļais 3.bloks beigas -->
+
 <!-- Zilais 1.bloks sākums -->
 <div id="sazinaties" class="box-blue1 cf">
 <div class="box-tonis cf">
 <div class="box-sektors cf">
   <h3>SAZINĀTIES</h3>
   <form action="index.html" method="post">
-    <input type="text" name="VardsUzvards" value="Vārds Uzvārds">
-    <input type="text" name="Epasts" value="E-pasts">
-    <textarea rows="8">Tavs jautājums</textarea>
+    <input type="text" name="VardsUzvards" placeholder="Vārds Uzvārds">
+    <input type="text" name="Epasts" placeholder="E-pasts">
+    <textarea name="TavsJautajums" rows="10" placeholder="Tavs jautājums"></textarea>
     <input type="submit" value="SŪTĪT ZIŅU">
   </form>
   <p>Rīga, Visskaistākā iela 1 // mob: (+371) 26 27 96 07 // hello@moodcreations.eu</p>
@@ -288,11 +338,15 @@
 <!-- Zilais 1.bloks beigas -->
 
 <!-- Zilais 2.bloks (karte) sākums -->
+<div class="box-blue2 cf">
+<div class="box-sektors cf">
+  <div class="map-lp87 cf">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.00386761427!2d24.1315909155014!3d56.94873500658831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece2e75827fd7%3A0x6db42ddf07b6831!2zTMSBxI1wbMSTxaFhIGllbGEgODcsIExhdGdhbGVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwMTE!5e0!3m2!1slv!2slv!4v1474040447941" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <h6>&#169; Copyright tekstam ir jābūt šeit, 2015</h6>
+</div>
+</div>
 <!-- Zilais 2.bloks (karte) beigas -->
-<div class="box-blue2">
 
-</div>
-
-</div>
 </body>
 </html>
