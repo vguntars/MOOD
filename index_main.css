@@ -1,517 +1,623 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-.cf:before,
+
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
 .cf:after {
-content: "";
-display: table;
+    clear: both;
 }
-.cf:after {
-clear: both;
-}
-section.centrs {
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-}
-section.centrs-v {
-position: absolute;
-top: 50%;
-transform: translate(0, -50%);
-}
-section.centrs-h {
-position: absolute;
-left: 50%;
-transform: translate(-50%, 0);
-}
+
 h3 {
-  font-size: 30px;
-  font-weight: 500;
-  text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
 }
+
 h4 {
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
 }
-body{
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.67;
-  color: #fafafa;
+
+button {
+    outline: none;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.67;
+    color: #fafafa;
+}
+
 div.pogu-sektors-h {
-  /*background-color: black;*/
-  width: 70px;
-  margin: 0px auto;
+    /*background-color: black;*/
+    width: 70px;
+    margin: 0px auto;
 }
+
 button.poga-h {
-  background: none;
-  padding: 0;
-  float: left;
-  margin: 0px 7px;
-  height: 9px;
-  width:  9px;
-  border: 2px solid rgba(255,255,255,.3);
-  border-radius: 50%
+    background: none;
+    padding: 0;
+    float: left;
+    margin: 0 7px;
+    height: 9px;
+    width: 9px;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 50%
 }
-div.pogu-sektors-h .poga-h:hover{
-  background-color: rgba(255,255,255,.7);
-  border: 2px solid rgba(255,255,255,.7);
+
+div.pogu-sektors-h .poga-h:hover {
+    background-color: rgba(255, 255, 255, .7);
+    border: 2px solid rgba(255, 255, 255, .7);
 }
+
+
 /**/
+
 div.pogu-sektors-v {
-  /*background-color: black;*/
-  width:  12px;
+    /*background-color: black;*/
+    width: 12px;
 }
+
 button.poga-v {
-  background: none;
-  padding: 0;
-  float: left;
-  margin: 7px 0;
-  height: 9px;
-  width:  9px;
-  border: 2px solid rgba(255,255,255,.3);
-  border-radius: 50%
+    float: left;
+    background: none;
+    padding: 0;
+    margin: 7px 0;
+    height: 9px;
+    width: 9px;
+    border: 2px solid rgba(255, 255, 255, .3);
+    border-radius: 50%
 }
-div.pogu-sektors-v .poga-v:hover{
-  background-color: rgba(255,255,255,.7);
-  border: 2px solid rgba(255,255,255,.7);
+
+div.pogu-sektors-v .poga-v:hover {
+    background-color: rgba(255, 255, 255, .7);
+    border: 2px solid rgba(255, 255, 255, .7);
 }
 
 
 /*BLOKI LAPĀ SĀKUMS*/
-div.box-sektors{
-  width: 1280px;
-  /*border: 1px solid black;
+
+div.box-sektors {
+    width: 1280px;
+    margin: 0 auto;
+    /*border: 1px solid black;
   width: 1282px;*/
-  margin: 0 auto;
 }
+
 
 /*Peldošā izvēlne sākums*/
+
 .box-topizvelne {
-  background-color: rgba(211,53,35,.3);
-  color: rgba(255,255,255,1);
-  font-size: 14px;
-  font-weight: 300;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+    background-color: rgba(211, 53, 35, .9);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-weight: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
+
 .box-topizvelne ul.men-h {
-  /*background-color: yellow;*/
-  list-style-type: none;
-  margin: 0 auto;
-  overflow: hidden;
+    /*background-color: yellow;*/
+    margin: 0 auto;
+    overflow: hidden;
 }
+
 .box-topizvelne li.left {
-  float: left;
+    display: block;
+    float: left;
 }
+
 .box-topizvelne li.right {
-  float:right;
+    display: block;
+    float: right;
 }
+
 .box-topizvelne img.pic-logo-v {
-  /*background-color: blue;*/
-  height: 50px;
-  margin-top: 10px;
-  margin-left: 20px;
+    /*background-color: blue;*/
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
+
 .box-topizvelne .txt-logo {
-  display: block;
-  padding: 25px 0 0 15px;
+    display: block;
+    padding: 25px 0 0 15px;
 }
+
 .box-topizvelne a {
-  /*background-color: blue;*/
-  width: 80px;
-  display: block;
-  padding: 20px 2px;
-  text-decoration: none;
-  color: rgba(255,255,255,1);
-  border-top: 5px solid  rgba(255,255,255,0);
-  text-align: center;
+    /*background-color: blue;*/
+    width: 80px;
+    display: block;
+    padding: 20px 2px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    text-align: center;
 }
+
 .box-topizvelne li.right a:hover {
-  border-top-color:  rgba(255,255,255,.7);
-  color: rgba(255,255,255,.7);
+    border-top-color: rgba(255, 255, 255, .7);
+    color: rgba(255, 255, 255, .7);
 }
+
+
 /*Peldošā izvēlne beigas*/
 
+
 /*Sarkanais 1.bloks sākums*/
+
 .box-red1 {
-  background-color: rgba(211,53,35,1);
-  background-image: url("grafika/REDbg-01.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-color: rgba(211, 53, 35, 1);
+    background-image: url("grafika/REDbg-01.png");
+    background-size: cover;
 }
+
 .box-red1 .box-tonis {
-  /*height: 800px;*/
-  background-color: rgba(211,53,35,.3);
+    /*height: 800px;*/
+    background-color: rgba(211, 53, 35, .3);
 }
-.box-red1 .pogu-sektors-v{
-  float: right;
-  margin: 390px 30px 0 0;
+
+.box-red1 .pogu-sektors-v {
+    float: right;
+    margin: 390px 30px 0 0;
 }
-.box-red1 .box-logo-h{
-  width: 918px;
-  margin: 240px auto 0 auto;
+
+.box-red1 .box-logo-h {
+    width: 918px;
+    margin: 240px auto 0 auto;
 }
-.box-red1 .txt-1{
-  display: block;
-  width: 930px;
-  margin: 38px auto 0 auto;;
-  font-size: 18px;
-  font-weight: 300;
-  text-align:center;
-  }
-.box-red1 .box-socikonas{
-  /*background-color: blue;*/
-  width: 250px;
-  margin: 25px auto 35px auto;
-  font-size: 28px;
-  text-align: center;
+
+.box-red1 .txt-head {
+    display: block;
+    width: 930px;
+    margin: 38px auto 0 auto;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
 }
-.box-red1 .box-socikonas a{
-  padding: 0px 10px;
-  text-decoration: none;
-  color: rgba(255,255,255,.5);
-  text-align: center;
+
+.box-red1 .box-socikonas {
+    /*background-color: blue;*/
+    margin: 25px auto 35px auto;
+    font-size: 28px;
+    text-align: center;
 }
-.box-red1 .box-socikonas a:hover{
-  color: rgba(255,255,255,1);
+
+.box-red1 .box-socikonas a {
+    padding: 0px 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5);
+    /*text-align: center;*/
 }
+
+.box-red1 .box-socikonas a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
 /*Sarkanais 1.bloks beigas*/
 
+
 /*Sarkanais 2.bloks sākums*/
+
 .box-red2 {
-  /*height: 550px;*/
-  background-color: rgba(211,53,35,1);
+    background-color: rgba(211, 53, 35, 1);
+    position: relative;
 }
-.box-red2 h3{
-  margin: 0;
-  padding-top: 55px;
+
+.box-red2 h3 {
+    margin: 0;
+    padding-top: 55px;
 }
+
 .box-red2 .box-sektors-apraksti {
-  /*background-color: yellow;*/
-  width: 1180px;
-  margin: 0 auto;
+    /*background-color: yellow;*/
+    width: 1180px;
+    margin: 0 auto;
 }
+
 .box-red2 .box-apraksts {
-  /*background-color: blue;*/
-  width: 235px;
-  float: left;
-  margin: 45px 30px 45px 30px;
+    /*background-color: blue;*/
+    width: 235px;
+    float: left;
+    margin: 45px 30px 45px 30px;
 }
-.box-red2 .box-apraksts .box-grafika{
-  width: 100px;
-  margin: 0 auto;
+
+.box-red2 .box-apraksts .box-grafika {
+    width: 100px;
+    margin: 0 auto;
 }
-.box-red2 .box-apraksts h4{
-  margin: 0;
-  padding-top: 2px;
+
+.box-red2 .box-apraksts h4 {
+    margin: 0;
+    padding-top: 2px;
 }
-.box-red2 .box-apraksts p{
-  margin: 0;
-  padding-top: 18px;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.35;
-  text-align:center;
+
+.box-red2 .box-apraksts p {
+    margin: 0;
+    padding-top: 18px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.35;
+    text-align: center;
 }
+
+
 /*Sarkanais 2.bloks beigas*/
 
+
 /*Zaļais 1.bloks sākums*/
+
 .box-green1 {
-  background-color: rgba(87,170,104,1);
-  background-image: url("grafika/GREENBg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-color: rgba(87, 170, 104, 1);
+    background-image: url("grafika/GREENBg.png");
+    background-size: cover;
+    position: relative;
 }
+
 .box-green1 .box-tonis {
-  /*height: 360px;*/
-  background-color: rgba(87,170,104,.3);
+    /*height: 360px;*/
+    background-color: rgba(87, 170, 104, .3);
 }
-.box-green1 h3{
-  margin: 0;
-  padding-top: 55px;
+
+.box-green1 h3 {
+    margin: 0;
+    padding-top: 55px;
 }
-.box-green1 .txt-1{
-  display: block;
-  width: 940px;
-  margin: 35px auto;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.35;
-  text-align:center;
-  }
+
+.box-green1 .txt-1 {
+    display: block;
+    width: 940px;
+    margin: 35px auto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.35;
+    text-align: center;
+}
+
 .box-green1 .menu-sektors {
-  margin: 30px auto 0px auto;
-  width: 800px;
+    margin: 30px auto 0px;
+    width: 800px;
 }
+
 .box-green1 .box-menu {
-  float: left;
-  text-align: center;
-  width: 160px;
+    float: left;
+    text-align: center;
+    width: 160px;
 }
-.box-green1 .box-menu span{
-  display: inline-block;
-  padding: 4px 8px;
-  border: 2px solid rgba(255,255,255,0);
-  border-radius: 7px;
-  color: rgba(255,255,255,1);
-  font-size: 14px;
+
+.box-green1 .box-menu span {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 7px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
 }
-.box-green1 .box-menu a:hover span{
-  color: rgba(255,255,255,.7);
-  border: 2px solid rgba(255,255,255,.7);
+
+.box-green1 .box-menu a:hover span {
+    color: rgba(255, 255, 255, .7);
+    border: 2px solid rgba(255, 255, 255, .7);
 }
-.box-green1 div.pogu-sektors-h{
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+.box-green1 div.pogu-sektors-h {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+
 /*Zaļais 1.bloks beigas*/
 
+
 /*Zaļais 2.bloks (fotogalerija) sākums*/
+
 .box-green2 {
-  background-color: rgba(87,170,104,1);
+    background-color: rgba(87, 170, 104, 1);
 }
+
 .box-green2 .box-foto {
-  width: 320px;
-  height: 300px;
-  float: left;
-  position: relative;
- }
-.box-green2 .box-foto img{
-  width: 100%;
-  height: 100%;
+    width: 320px;
+    height: 300px;
+    float: left;
+    position: relative;
 }
-.box-green2 .box-hover{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(87,170,104,.7);
-  opacity: 0;
+
+.box-green2 .box-foto img {
+    width: 100%;
+    height: 100%;
 }
-.box-green2 .box-foto:hover .box-hover{
-  opacity: 1;
+
+.box-green2 .box-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(87, 170, 104, .7);
+    opacity: 0;
 }
-.box-green2 .box-ringtxt{
-  /*background-color: yellow;*/
-  width: 100%;
-  font-size: 18px;
-  line-height: 1.35;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+
+.box-green2 .box-foto:hover .box-hover {
+    opacity: 1;
 }
-.box-green2 .box-ringtxt span{
-  font-size: 14px;
-  font-weight: 300;
+
+.box-green2 .box-ringtxt {
+    /*background-color: yellow;*/
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.35;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
 }
-.box-green2 .box-ring{
-   /*background-color: blue;*/
-   width: 48px;
-   height: 48px;
-   margin: 0 auto 25px auto;
+
+.box-green2 .box-ringtxt span {
+    font-size: 14px;
+    font-weight: 300;
 }
-.box-green2 .box-ring div{
-  border: 1px solid rgba(255, 255, 255, 1);
-  border-radius: 50%;
-  margin: 4px auto;
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
+
+.box-green2 .box-ring {
+    /*background-color: blue;*/
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 25px auto;
 }
+
+.box-green2 .box-ring div {
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    margin: 4px auto;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+}
+
 
 /*Zaļais 2.bloks (fotogalerija) beigas*/
 
+
 /*Zaļais 3.bloks*/
+
 .box-green3 {
-  background-color: rgba(97,180,114,1);
+    background-color: rgba(97, 180, 114, 1);
+    position: relative;
 }
-.box-green3 h3{
-  font-size: 28px;
-  margin: 0;
-  padding-top: 55px;
+
+.box-green3 h3 {
+    font-size: 28px;
+    margin: 0;
+    padding-top: 55px;
 }
-.box-green3 .txt-main{
-  display: block;
-  width: 960px;
-  margin: 40px auto;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.35;
+
+.box-green3 .txt-main {
+    display: block;
+    width: 960px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.35;
 }
-.box-green3 div.pogu-sektors-h{
-  margin-top: 40px;
-  margin-bottom: 30px;
+
+.box-green3 div.pogu-sektors-h {
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
+
 .box-green3 .box-sektors-apraksti {
-  /*background-color: yellow;*/
-  width: 1200px;
-  margin: 0 auto;
+    /*background-color: yellow;*/
+    width: 1200px;
+    margin: 0 auto;
 }
-.box-green3 .box-apraksts{
-  /*background-color: blue;*/
-  width: 270px;
-  float: left;
-  margin: 0 15px;
-  text-align: center;
+
+.box-green3 .box-apraksts {
+    /*background-color: blue;*/
+    width: 270px;
+    float: left;
+    margin: 0 15px;
+    text-align: center;
 }
-.box-green3 .box-foto{
-  width: 100%;
-  height: 300px;
-  position: relative;
+
+.box-green3 .box-foto {
+    width: 100%;
+    height: 300px;
+    position: relative;
 }
-.box-green3 .box-foto img{
-  width: 100%;
-  height: 100%;
+
+.box-green3 .box-foto img {
+    width: 100%;
+    height: 100%;
 }
-.box-green3 .box-fotohover{
-  width: 100%;
-  height: 100%;
-  padding: 20px 20px;
-  position: absolute;
-  background-color: rgba(87,170,104,.7);
-  visibility: hidden;
-  text-align: center;
-  line-height: 1.35;
+
+.box-green3 .box-fotohover {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    position: absolute;
+    background-color: rgba(87, 170, 104, .7);
+    visibility: hidden;
+    text-align: center;
+    line-height: 1.35;
 }
-.box-green3 .box-fotohover .txt-1{
-  /*background-color: blue;*/
-  display:inline-block;
-  font-size: 18px;
+
+.box-green3 .box-fotohover .txt-1 {
+    /*background-color: blue;*/
+    display: inline-block;
+    font-size: 18px;
 }
-.box-green3 .box-fotohover .txt-2{
-  /*background-color: red;*/
-  display:inline-block;
-  padding-top: 5px;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
+
+.box-green3 .box-fotohover .txt-2 {
+    /*background-color: red;*/
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
 }
-.box-green3 .box-foto:hover .box-fotohover{
-  visibility: visible;
+
+.box-green3 .box-foto:hover .box-fotohover {
+    visibility: visible;
 }
-.box-green3 .box-socikonas{
-  /*background-color: blue;*/
-  width: 150px;
-  margin: 70px auto;
-  font-size: 30px;
-  text-align: center;
+
+.box-green3 .box-socikonas {
+    /*background-color: blue;*/
+    width: 150px;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
-.box-green3 .box-socikonas a{
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  background-color: rgba(0,0,0,.5);
-  padding: 2px 0;
-  text-decoration: none;
-  color: rgba(255,255,255,.5);
-  text-align: center;
+
+.box-green3 .box-socikonas a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 2px 0;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5);
 }
-.box-green3 .box-socikonas a:hover{
-  color: rgba(255,255,255,1);
+
+.box-green3 .box-socikonas a:hover {
+    color: rgba(255, 255, 255, 1);
 }
-.box-green3 span.txt-darbinieks{
-  display: block;
-  width: 100%;
-  margin-top: 15px;
-  font-size: 18px;
+
+.box-green3 span.txt-darbinieks {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
 }
-.box-green3 span.txt-amats{
-  display: block;
-  margin: 2px 0px 75px 0px;
-  font-size: 13px;
-  opacity: .7;
-  }
+
+.box-green3 span.txt-amats {
+    display: block;
+    margin: 2px 0 75px;
+    font-size: 13px;
+    opacity: .7;
+}
+
+
 /*Zaļais 3.bloks beigas*/
 
+
 /*Zilais 1.bloks sākums*/
+
 .box-blue1 {
-  background-color: rgba(46,45,107,1);
-  background-image: url("grafika/BLUEbg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-color: rgba(46, 45, 107, 1);
+    background-image: url("grafika/BLUEbg.png");
+    background-size: cover;
+    position: relative;
+    ;
 }
+
 .box-blue1 .box-tonis {
-  background-color: rgba(46,45,107,.3);
+    background-color: rgba(46, 45, 107, .3);
 }
-.box-blue1 h3{
-  /*background-color: yellow;*/
-  margin: 0;
-  padding-top: 40px;
+
+.box-blue1 h3 {
+    /*background-color: yellow;*/
+    margin: 0;
+    padding-top: 40px;
 }
-.box-blue1 form{
-  /*background-color: yellow;*/
-  width: 620px;
-  margin: 30px auto 0 auto;;
+
+.box-blue1 form {
+    /*background-color: yellow;*/
+    width: 620px;
+    margin: 30px auto 0 auto;
+    ;
 }
+
 .box-blue1 input[type=text] {
-  width: 100%;
-  padding: 10px 10px;
-  margin: 5px 0;
-  border: none;
-  border-radius: 2px;
-  color: rgba(255,255,255,1);
-  background-color: rgba(46,45,107,1);
-  font-size: 13px;
-  opacity: .7;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(46, 45, 107, 1);
+    font-size: 13px;
+    opacity: .7;
 }
+
 .box-blue1 textarea {
-  width: 100%;
-  padding: 10px 10px;
-  margin: 5px 0;
-  border: none;
-  border-radius: 2px;
-  color: rgba(255,255,255,1);
-  background-color: rgba(46,45,107,1);
-  font-family: 'Roboto', sans-serif;
-  font-size: 13px;
-  opacity: .7;
-  resize: none;
+    width: 100%;
+    height: 230px;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(46, 45, 107, 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    opacity: .7;
+    resize: none;
 }
+
 .box-blue1 input[type=submit] {
-  width: 100%;
-  padding: 5px 5px;
-  margin: 0;
-  color: rgba(255,255,255,1);
-  background-color: rgba(46,45,107,0);
-  border: 1px solid rgba(255,255,255,1);
-  border-radius: 2px;
-  font-size: 16px;
-  cursor: pointer;
+    width: 100%;
+    padding: 5px 5px;
+    margin: 0;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(46, 45, 107, 0);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
 }
+
 .box-blue1 p {
-  padding: 15px 0 20px 0;
-  font-size: 21px;
-  font-weight: 300;
-  display: block;
-  text-align: center;
+    padding: 15px 0 20px;
+    font-size: 21px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
 }
+
+
 /*Zilais 1.bloks beigas*/
 
+
 /*Zilais 2.bloks (karte) sākums*/
+
 .box-blue2 {
-  background-color: rgba(46,45,107,1);
+    background-color: rgba(46, 45, 107, 1);
 }
+
 .box-blue2 .map-lp87 {
-  height: 600px;
-  width: 100%;
+    height: 400px;
+    width: 100%;
 }
+
 .box-blue2 iframe {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
-.box-blue2 h6{
-  font-size: 13px;
-  font-weight: 300;
-  text-align: center;
-  margin: 0;
-  padding: 10px 0;
+
+.box-blue2 h6 {
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
 }
+
+
 /*Zilais 2.bloks (karte) beigas*/
+
+#pakalpojumi, #darbi, #komanda, #sazinaties {
+    position: absolute;
+    top: -50px
+}
+
 
 /*Projekta beigas*/
