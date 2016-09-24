@@ -50,7 +50,7 @@ button.poga-h {
     border-radius: 50%
 }
 
-div.pogu-sektors-h .poga-h:hover {
+div.pogu-sektors-h .poga-active, .poga-h:hover {
     background-color: rgba(255, 255, 255, .7);
     border: 2px solid rgba(255, 255, 255, .7);
 }
@@ -74,7 +74,7 @@ button.poga-v {
     border-radius: 50%
 }
 
-div.pogu-sektors-v .poga-v:hover {
+div.pogu-sektors-v .poga-active, .poga-v:hover {
     background-color: rgba(255, 255, 255, .7);
     border: 2px solid rgba(255, 255, 255, .7);
 }
@@ -82,12 +82,18 @@ div.pogu-sektors-v .poga-v:hover {
 
 /*BLOKI LAPĀ SĀKUMS*/
 
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
 div.box-sektors {
     width: 1280px;
     margin: 0 auto;
     /*border: 1px solid black;
-  width: 1282px;*/
+    width: 321px;*/
 }
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
 /*Peldošā izvēlne sākums*/
@@ -104,9 +110,15 @@ div.box-sektors {
     z-index: 100;
 }
 
-.box-topizvelne ul.men-h {
+.box-topizvelne .box-right {
     /*background-color: yellow;*/
-    margin: 0 auto;
+    float: right;
+    padding-right: 50px;
+}
+
+.box-topizvelne ul {
+    list-style-type: none;
+    margin: 0;
     overflow: hidden;
 }
 
@@ -115,21 +127,17 @@ div.box-sektors {
     float: left;
 }
 
-.box-topizvelne li.right {
-    display: block;
-    float: right;
-}
-
-.box-topizvelne img.pic-logo-v {
-    /*background-color: blue;*/
+.box-topizvelne .pic-logo-v {
+    float: left;
     height: 50px;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .box-topizvelne .txt-logo {
+    float: left;
     display: block;
-    padding: 25px 0 0 15px;
+    padding: 25px 15px 20px;
 }
 
 .box-topizvelne a {
@@ -143,7 +151,7 @@ div.box-sektors {
     text-align: center;
 }
 
-.box-topizvelne li.right a:hover {
+.box-topizvelne a:hover {
     border-top-color: rgba(255, 255, 255, .7);
     color: rgba(255, 255, 255, .7);
 }
@@ -171,13 +179,19 @@ div.box-sektors {
 }
 
 .box-red1 .box-logo-h {
-    width: 918px;
-    margin: 240px auto 0 auto;
+    /*width: 918px;*/
+    width: 71.7%;
+    margin: 240px auto 0;
+}
+
+.box-red1 .box-logo-h img {
+    width: 100%;
 }
 
 .box-red1 .txt-head {
     display: block;
-    width: 930px;
+    /*width: 930px;*/
+    width: 72.6%;
     margin: 38px auto 0 auto;
     font-size: 18px;
     font-weight: 300;
@@ -220,19 +234,28 @@ div.box-sektors {
 
 .box-red2 .box-sektors-apraksti {
     /*background-color: yellow;*/
-    width: 1180px;
+    /*width: 1180px;*/
+    width: 92.2%;
     margin: 0 auto;
 }
 
 .box-red2 .box-apraksts {
     /*background-color: blue;*/
-    width: 235px;
-    float: left;
-    margin: 45px 30px 45px 30px;
+    display: inline-block;
+    /*width: 290px;*/
+    width: 24.7%;
+    min-width: 250px;
+    vertical-align: top;
+    padding: 45px 30px;
 }
 
 .box-red2 .box-apraksts .box-grafika {
     width: 100px;
+    margin: 0 auto;
+}
+
+.box-red2 .box-apraksts img {
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -273,10 +296,11 @@ div.box-sektors {
     padding-top: 55px;
 }
 
-.box-green1 .txt-1 {
+.box-green1 .txt-darbi {
     display: block;
-    width: 940px;
-    margin: 35px auto;
+    /*width: 940px;*/
+    width: 73.4%;
+    margin: 35px auto 0;
     font-size: 18px;
     font-weight: 300;
     line-height: 1.35;
@@ -284,17 +308,21 @@ div.box-sektors {
 }
 
 .box-green1 .menu-sektors {
-    margin: 30px auto 0px;
-    width: 800px;
+    /*background-color: blue;*/
+    margin: 15px auto 0;
+    /*width: 800px;*/
+    width: 62.5%;
 }
 
 .box-green1 .box-menu {
+    margin-top: 20px;
     float: left;
     text-align: center;
     width: 160px;
 }
 
-.box-green1 .box-menu span {
+
+/*.box-green1 .box-menu .menu-darbi {
     display: inline-block;
     padding: 4px 8px;
     border: 2px solid rgba(255, 255, 255, 0);
@@ -302,19 +330,31 @@ div.box-sektors {
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
 }
+*/
 
-.box-green1 .box-menu a:hover span {
+.box-green1 .menu-darbi {
+    padding: 4px 8px;
+    margin: 0;
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.box-green1 .menu-active, .menu-darbi:hover {
     color: rgba(255, 255, 255, .7);
     border: 2px solid rgba(255, 255, 255, .7);
 }
 
-.box-green1 div.pogu-sektors-h {
+.box-green1 .pogu-sektors-h {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
 
-/*Zaļais 1.bloks beigas*/
+/*Zaļais 1.bloks beigas
 
 
 /*Zaļais 2.bloks (fotogalerija) sākums*/
@@ -370,7 +410,8 @@ div.box-sektors {
     margin: 0 auto 25px auto;
 }
 
-.box-green2 .box-ring div {
+.box-green2 .box-ring span {
+    display: block;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     margin: 4px auto;
@@ -395,9 +436,10 @@ div.box-sektors {
     padding-top: 55px;
 }
 
-.box-green3 .txt-main {
+.box-green3 .txt-komanda {
     display: block;
     width: 960px;
+    width: 75%;
     margin: 40px auto;
     text-align: center;
     font-size: 18px;
@@ -412,7 +454,8 @@ div.box-sektors {
 
 .box-green3 .box-sektors-apraksti {
     /*background-color: yellow;*/
-    width: 1200px;
+    /*width: 1200px;*/
+    width: 93.75%;
     margin: 0 auto;
 }
 
@@ -531,7 +574,9 @@ div.box-sektors {
 
 .box-blue1 form {
     /*background-color: yellow;*/
-    width: 620px;
+    /*width: 620px;*/
+    width: 48.4%;
+    min-width: 320px;
     margin: 30px auto 0 auto;
     ;
 }
@@ -568,7 +613,7 @@ div.box-sektors {
     padding: 5px 5px;
     margin: 0;
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(46, 45, 107, 0);
+    background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 2px;
     font-size: 16px;
