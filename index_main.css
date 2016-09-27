@@ -423,6 +423,111 @@ div.box-sektors {
 /*Zaļais 2.bloks (fotogalerija) beigas*/
 
 
+/*JūrasZaļais 1.bloks sākums*/
+
+.box-grsea1 {
+    background-color: rgba(111, 250, 255, 1);
+    background-image: url("grafika/GREENBg.png");
+    background-size: cover;
+    position: relative;
+}
+
+.box-grsea1 .box-tonis {
+    background-color: rgba(111, 250, 255, .3);
+}
+
+.box-grsea1 h3 {
+    margin: 0;
+    padding-top: 55px;
+}
+
+.box-grsea1 .menu-sektors {
+    /*background-color: blue;*/
+    margin: 15px auto 30px;
+    width: 50%;
+}
+
+.box-grsea1 .box-menu {
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    width: 160px;
+}
+
+.box-grsea1 .menu-darbi {
+    padding: 4px 8px;
+    margin: 0;
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.box-grsea1 .menu-active, .menu-darbi:hover {
+    color: rgba(255, 255, 255, .7);
+    border: 2px solid rgba(255, 255, 255, .7);
+}
+
+
+/*JūrasZaļais 1.bloks beias*/
+
+
+/*JūrasZaļais 2.bloks sākums*/
+
+.box-grsea2 {
+    background-color: rgba(42, 87, 89, 1);
+}
+.box-grsea2 table{
+  margin: 0 auto;
+  width: 86%;
+}
+.box-grsea2 th, .box-grsea2 td{
+  width: 25%;
+  text-align: center;
+  vertical-align: middle;
+}
+.box-grsea2 th{
+  font-size: 20px;
+  font-weight: 400;
+  padding: 40px 0 20px;
+}
+.box-grsea2 tbody tr td{
+font-size: 16px;
+font-weight: 300;
+height: 50px;
+color: rgba(255,255,255,.7);
+}
+.box-grsea2 tfoot tr td{
+font-size: 30px;
+height: 80px;
+}
+.box-grsea2 .row-poga td {
+  border-top: 1px solid rgba(255,255,255,.5);
+  padding: 20px 0 80px;
+}
+.box-grsea2 .row-poga .signup {
+  width: 140px;
+  font-size: 16px;
+  padding: 5px 0;
+    margin: 0;
+    color: rgba(255, 255, 255, 1);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.box-grsea2 .hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(49, 103, 105, 1);
+}
+.box-grsea2 .hover .signup{
+  background-color: rgba(71, 133, 135, 1);
+}
+/*JūrasZaļais 2.bloks beias*/
+
+
 /*Zaļais 3.bloks*/
 
 .box-green3 {
