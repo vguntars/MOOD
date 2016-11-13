@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index_main.css">
+    <script src="js/main_functions.js"></script>
+    <script src="js/index_before.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <!-- Peldošā izvēlne sākums -->
     <div class="box-top-navi">
         <div class="box-section cf">
-            <a href="#sakums"><img class="pic-logo-navi" src="grafika/logoV-01.png" alt="MOOD logo mazais" />
+            <a id="top-logo" href="#sakums"><img class="pic-logo-navi" src="grafika/logoV-01.png" alt="MOOD logo mazais" />
                 <div class="txt-logo-navi">dizaina darbnīca</div>
             </a>
             <div class="box-right cf">
@@ -61,15 +63,14 @@
     <!-- Sarkanais 2.bloks sākums -->
     <div id="pakalpojumi" class="box-services">
         <div class="box-section cf">
-            <h3>PAKALPOJUMI</h3>
+            <h3>Pakalpojumi</h3>
             <div class="box-section-descrptions">
-
                 <!-- 1 -->
                 <div class="box-descrption">
                     <div class="box-graphics">
                         <img src="grafika-svg/brush.svg" alt="grafika ota" />
                     </div>
-                    <h4>GRAFISKAIS DIZAINS</h4>
+                    <h4>Grafiskais dizains</h4>
                     <p>
                         Veicam plašu darbu klāstu gan jauniem uzņēmumiem (firmas stila un logo izstrāde, zīmogs, vizītkartes), gan arī apkalpojam uzņēmumu ikdienas reklāmas vajadzībām
                     </p>
@@ -79,7 +80,7 @@
                     <div class="box-graphics">
                         <img src="grafika-svg/eye.svg" alt="grafika acs" />
                     </div>
-                    <h4>POLIGRĀFIJA</h4>
+                    <h4>Poligrāfija</h4>
                     <p>
                         Mēs sadarbojamies ar labākajām tipogrāfijām un digitālās drukas centriem un nodrošinām to, ka klients iegūst ne tikai maketu vai salikumu, bet gatavu produktu – bukletu, vizītkarti, plakātu un tml.
                     </p>
@@ -89,7 +90,7 @@
                     <div class="box-graphics">
                         <img src="grafika-svg/uiux.svg" alt="grafika UiUx" />
                     </div>
-                    <h4>UI/UX DIZAINS</h4>
+                    <h4>UI/UX dizains</h4>
                     <p>
                         Veidojam tīmekļa un aplikāciju vizuālo un lietojamības dizainu lai lietotājs ātri un ērti var iegūt nepieciešamo informāciju
                     </p>
@@ -99,7 +100,7 @@
                     <div class="box-graphics">
                         <img src="grafika-svg/camera.svg" alt="grafika kamera" />
                     </div>
-                    <h4>FOTO / VIDEO APSTRĀDE</h4>
+                    <h4>Foto / Video apstrāde</h4>
                     <p>
                         Fotografējam produktus un produktu kompozīcijas, interjerus, objektus un vietas reklāmas vajadzībām. Veicam fotoapstrādi, kā arī video montāžu un apstrādi
                     </p>
@@ -112,7 +113,7 @@
     <div id="darbi" class="box-works">
         <div class="box-tone">
             <div class="box-section cf">
-                <h3>MŪSU DARBI</h3>
+                <h3>Mūsu darbi</h3>
                 <div class="box-txt-works">
                     <p>
                         Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec
@@ -121,25 +122,19 @@
                 </div>
                 <div class="menu-section-horizontal">
                     <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal btn-menu-horizontal-active" type="button">VISS</button>
+                        <button class="btn-menu-horizontal btn-menu-horizontal-active" type="button" data-catid="-1">VISS</button>
                     </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">IDENTITĀTE</button>
-                    </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">WEB DIZAINS</button>
-                    </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">APLIKĀCIJU DIZAINS</button>
-                    </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">FOTOGRĀFIJA</button>
-                    </div>
+                    <script>
+                        createBtnCategories()
+                    </script>
                 </div>
                 <div class="box-buttons-ring">
-                    <button type="button" class="btn-ring btn-ring-active"></button>
-                    <button type="button" class="btn-ring"></button>
-                    <button type="button" class="btn-ring"></button>
+                    <script>
+                        var btnCount = 0
+                        btnCount = parseInt(workItems.length / WORK_ITEMS_DEMO_COUNT)
+                        if (workItems.length % WORK_ITEMS_DEMO_COUNT) btnCount++
+                            createBtnRing(btnCount)
+                    </script>
                 </div>
 
             </div>
@@ -148,164 +143,27 @@
     <!-- Zaļais 1.bloks beigas -->
 
     <!-- Zaļais 2.bloks (fotogalerija) sākums -->
-    <div class="box-gallery">
+    <div id="galerija" class="box-gallery">
         <div class="box-tone">
-            <div class="box-section cf ">
-                <!-- 1 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                    <span>
-                                        <span>
-                                            <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-02.png" alt="foto-02" />
-                </div>
-                <!-- 2 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-03.png" alt="foto-03" />
-                </div>
-                <!-- 3 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-04.png" alt="foto-04" />
-                </div>
-                <!-- 4 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-05.png" alt="foto-05" />
-                </div>
-                <!-- 5 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-06.png" alt="foto-06" />
-                </div>
-                <!-- 6 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-01.png" alt="foto-01" />
-                </div>
-                <!-- 7 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-07.png" alt="foto-07" />
-                </div>
-                <!-- 8 -->
-                <div class="box-foto">
-                    <div class="box-hover">
-                        <div class="box-ringtxt">
-                            <div class="box-ring cf">
-                                <span>
-                                  <span>
-                                      <span>
-                                          <span></span>
-                                </span>
-                                </span>
-                                </span>
-                            </div>
-                            Proin gravida nibh vel velit
-                            <span class="txt-foto">Fotogrāfija</span>
-                        </div>
-                    </div>
-                    <img src="foto/photo-08.png" alt="foto-08" />
-                </div>
-                <!--  -->
+          <div class="box-slide-all">
+                <script>
+                var ii = 0;
+                for (var i = 0; i < workItems.length; i++) {
+                    if (ii === 0) document.write('<div class="box-slide">')
+                    ii += 1
+                        document.write('<a href="#"><div class="box-foto">\
+                        <div class="box-hover"><div class="box-ringtxt">\
+                        <div class="box-ring cf"><span><span><span><span></span></span></span></span></div>\
+                        ' + workItems[i].title + '<span class="txt-foto">Fotogrāfija</span></div></div>\
+                        <img src="' + workItems[i].image + '" alt="foto-0' + workItems[i].catid + '" /></div></a>')
+                        if (ii === WORK_ITEMS_DEMO_COUNT || i === workItems.length -1) {
+                            document.write('</div>');
+                            ii = 0;
+                        }
+                    }
+                </script>
+              </div>
             </div>
-        </div>
     </div>
     <!-- Zaļais 2.bloks (fotogalerija) beigas -->
 
@@ -313,20 +171,11 @@
     <div class="box-price">
         <div class="box-tone">
             <div class="box-section cf">
-                <h3>CENRĀDIS</h3>
+                <h3>Cenrādis</h3>
                 <div class="menu-section-horizontal">
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal btn-menu-horizontal-active" type="button">IDENTITĀTE</button>
-                    </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">WEB DIZAINS</button>
-                    </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">APLIKĀCIJU DIZAINS</button>
-                    </div>
-                    <div class="box-menu-horizontal">
-                        <button class="btn-menu-horizontal" type="button">FOTOGRĀFIJA</button>
-                    </div>
+                    <script>
+                        createBtnCategories()
+                    </script>
                 </div>
             </div>
         </div>
@@ -339,10 +188,10 @@
             <table>
                 <thead>
                     <tr>
-                        <th>START</th>
-                        <th>BASIC</th>
-                        <th class="hover">PRO</th>
-                        <th>SUPER</th>
+                        <th>Start</th>
+                        <th>Basic</th>
+                        <th class="hover">Pro</th>
+                        <th>Super</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -394,7 +243,7 @@
     <!-- Zaļais 3.bloks sākums-->
     <div id="komanda" class="box-team">
         <div class="box-section cf">
-            <h3>MŪSU KOMANDA</h3>
+            <h3>Mūsu komanda</h3>
             <div class="box-txt-team">
                 <p>
                     Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec
@@ -403,81 +252,42 @@
                 </p>
             </div>
             <div class="box-buttons-ring">
-                <button type="button" class="btn-ring btn-ring-active"></button>
-                <button type="button" class="btn-ring"></button>
-                <button type="button" class="btn-ring"></button>
+                <script>
+                    var btnCount = 0
+                    btnCount = parseInt(teamItems.length / TEAM_ITEMS_DEMO_COUNT)
+                    if (teamItems.length % TEAM_ITEMS_DEMO_COUNT) btnCount++
+                        createBtnRing(btnCount)
+                </script>
             </div>
-            <div class="box-section-descrptions">
-
-                <!-- 1 -->
-                <div class="box-descrption">
-                    <div class="box-foto">
-                        <div class="box-fotohover">
-                            <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>
-                            <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
-                            <div class="box-socicons">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <img src="foto/01.png" alt="foto Jānis Pirmais (Izpilddirektors)" />
-                    </div>
-                    <span class="txt-name">Jānis Pirmais</span>
-                    <span class="txt-office">Izpilddirektors</span>
-                </div>
-                <!-- 2 -->
-                <div class="box-descrption">
-                    <div class="box-foto">
-                        <div class="box-fotohover">
-                            <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>
-                            <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
-                            <div class="box-socicons">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <img src="foto/02.png" alt="foto Annija Otrā (Grafiskā dizainere)" />
-                    </div>
-                    <span class="txt-name">Annija Otrā</span>
-                    <span class="txt-office">Grafiskā dizainere</span>
-                </div>
-                <!-- 3 -->
-                <div class="box-descrption">
-                    <div class="box-foto">
-                        <div class="box-fotohover">
-                            <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>
-                            <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
-                            <div class="box-socicons">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <img src="foto/03.png" alt="foto Kristaps Trešais (Front-end izstrādātājs)" />
-                    </div>
-                    <span class="txt-name">Kristaps Trešais</span>
-                    <span class="txt-office">Front-end izstrādātājs</span>
-                </div>
-                <!-- 4 -->
-                <div class="box-descrption">
-                    <div class="box-foto">
-                        <div class="box-fotohover">
-                            <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>
-                            <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>
-                            <div class="box-socicons">
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <img src="foto/04.png" alt="foto Ketija Ceturtā (UI/UX dizainere)" />
-                    </div>
-                    <span class="txt-name">Ketija Ceturtā</span>
-                    <span class="txt-office">UI/UX dizainere</span>
-                </div>
-
+            <div class="box-slide-all">
+                <script>
+                    var ii = 0;
+                    for (var i = 0; i < teamItems.length; i++) {
+                        if (ii === 0) document.write('<div class="box-slide">')
+                        ii += 1
+                        document.write(
+                            '<div class="box-descrption">\
+                            <div class="box-foto">\
+                            <div class="box-fotohover">\
+                            <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>\
+                            <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>\
+                            <div class="box-socicons">\
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>\
+                            <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>\
+                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>\
+                            </div>\
+                            </div>\
+                            <img src="' + teamItems[i].image + '" alt="foto ' + teamItems[i].name + ' (' + teamItems[i].office + ')" />\
+                            </div>\
+                            <span class="txt-name">' + teamItems[i].name + '</span>\
+                            <span class="txt-office">' + teamItems[i].office + '</span>\
+                            </div>')
+                            if (ii === TEAM_ITEMS_DEMO_COUNT || i === teamItems.length -1) {
+                            document.write('</div>');
+                            ii = 0;
+                        }
+                    }
+                </script>
             </div>
         </div>
     </div>
@@ -487,12 +297,18 @@
     <div id="sazinaties" class="box-contact">
         <div class="box-tone">
             <div class="box-section cf">
-                <h3>SAZINĀTIES</h3>
-                <form action="index.html" method="post">
-                    <input type="text" name="VardsUzvards" placeholder="Vārds Uzvārds">
-                    <input type="text" name="Epasts" placeholder="E-pasts">
-                    <textarea name="TavsJautajums" placeholder="Tavs jautājums"></textarea>
-                    <input type="submit" value="SŪTĪT ZIŅU">
+                <h3>Sazināties</h3>
+                <form id="input-form" action="index.html" method="post">
+                    <div class="input-box">
+                        <input id="inputName" class="input-txt" type="text" name="VardsUzvards" placeholder="Vārds Uzvārds">
+                    </div>
+                    <div class="input-box">
+                        <input id="inputEmail" class="input-txt" type="text" name="Epasts" placeholder="E-pasts">
+                    </div>
+                    <div class="input-box">
+                        <textarea id="inputMessage" class="input-txt" name="TavsJautajums" placeholder="Tavs jautājums"></textarea>
+                    </div>
+                    <input type="submit" name="input-btn" value="SŪTĪT ZIŅU">
                 </form>
                 <div class="box-txt">
                     <p>Rīga, Visskaistākā iela 1 // mob: (+371) 26 27 96 07 // <a href="mailto:hello@moodcreations.eu">hello@moodcreations.eu</a></p>
@@ -513,7 +329,9 @@
         <!-- </div> -->
     </div>
     <!-- Zilais 2.bloks (karte) beigas -->
-
+    <script src="js/index_scroll.js"></script>
+    <script src="js/index_form_valid.js"></script>
+    <script src="js/index_slide.js"></script>
 </body>
 
 </html>

@@ -16,16 +16,19 @@ h3 {
     font-size: 30px;
     font-weight: 400;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h4 {
     font-size: 18px;
     font-weight: 400;
     text-align: center;
+    text-transform: uppercase;
 }
 
 button {
     outline: none;
+    text-transform: uppercase;
 }
 
 body {
@@ -82,6 +85,7 @@ a, a:link, a:visited, a:hover, a:active {
     border-radius: 7px;
     font-size: 13px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .btn-menu-horizontal-active, .btn-menu-horizontal:hover {
@@ -103,8 +107,8 @@ div.box-section {
     padding: 0 60px;
     margin: 0 auto;
     /*border: 1px solid black;
-    min-width: 322px;
-    width: 1282px;*/
+min-width: 322px;
+width: 1282px;*/
 }
 
 
@@ -289,14 +293,14 @@ div.box-section {
 
 /*Zaļais 1.bloks sākums*/
 
-.box-works, .box-gallery {
+.box-works {
     background-color: rgba(87, 170, 104, 1);
     background-image: url("../grafika/GREENBg.png");
     background-size: cover;
     position: relative;
 }
 
-.box-works .box-tone, .box-gallery .box-tone {
+.box-works .box-tone {
     background-color: rgba(87, 170, 104, .3);
     text-align: center;
 }
@@ -323,15 +327,38 @@ div.box-section {
 
 
 /*Zaļais 2.bloks (fotogalerija) sākums*/
+.box-gallery {
+    background-color: rgba(87, 170, 104, 1);
+    background-image: url("../grafika/GREENBg.png");
+    background-size: cover;
+}
 
-.box-gallery .box-section {
-    padding: 0;
+.box-gallery .box-tone {
+    background-color: rgba(87, 170, 104, .3);
+    text-align: center;
+    font-size: 0;
+}
+
+.box-gallery .box-slide-all {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 1280px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.box-gallery .box-slide {
+    /*background-color: yellow;*/
+    flex: 0 0 100%;
+    width: 100%;
+    font-size: 0;
+    transition: transform .25s ease-in-out;
 }
 
 .box-gallery .box-foto {
     width: 320px;
     height: 300px;
-    float: left;
+    display: inline-block;
     position: relative;
 }
 
@@ -439,6 +466,7 @@ div.box-section {
     font-size: 20px;
     font-weight: 400;
     padding: 40px 0 20px;
+    text-transform: uppercase;
 }
 
 .box-pricelist tbody tr td {
@@ -504,9 +532,20 @@ div.box-section {
     margin-bottom: 25px;
 }
 
-.box-team .box-section-descrptions {
+.box-team .box-slide-all {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 1120px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.box-team .box-slide {
     /*background-color: yellow;*/
+    flex: 0 0 100%;
+    width: 100%;
     font-size: 0;
+    transition: transform .25s ease-in-out;
 }
 
 .box-team .box-descrption {
@@ -628,26 +667,24 @@ div.box-section {
     margin: 35px auto 0;
 }
 
-.box-contact input[type=text] {
+.box-contact .input-txt {
     width: 100%;
     padding: 12px 12px;
     margin-bottom: 10px;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 3px;
     background-color: rgba(46, 45, 107, .7);
     font-size: 13px;
 }
 
-.box-contact textarea {
-    width: 100%;
+.box-contact textarea.input-txt {
     height: 230px;
-    padding: 12px 12px;
-    border: none;
-    border-radius: 3px;
-    background-color: rgba(46, 45, 107, .7);
     font-family: 'Roboto', sans-serif;
-    font-size: 13px;
     resize: none;
+}
+
+.box-contact .input-err {
+    border-color: rgba(255, 100, 100, .7);
 }
 
 .box-contact input[type=submit] {
@@ -665,6 +702,38 @@ div.box-section {
     padding: 20px 0 50px;
     font-size: 18px;
     text-align: center;
+}
+
+.box-contact .input-box {
+    position: relative;
+}
+
+.message-err {
+    width: 150px;
+    background-color: rgba(255, 100, 100, .7);
+    display: block;
+    position: absolute;
+    padding: 5px;
+    top: 0;
+    right: -160px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+.message-err:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px 8px 8px 0;
+    border-color: transparent rgba(255, 100, 100, .7);
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-top: -8px;
+    margin-left: -8px;
+    top: 50%;
+    left: 0;
 }
 
 
