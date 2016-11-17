@@ -35,28 +35,38 @@
 
     <!-- Sarkanais 1.bloks sākums -->
     <div id="sakums" class="box-head">
-        <div class="box-tone">
-            <div class="box-section cf">
-                <div class="box-buttons-ring">
-                    <button type="button" class="btn-ring btn-ring-active"></button>
-                    <button type="button" class="btn-ring"></button>
-                    <button type="button" class="btn-ring"></button>
-                </div>
-                <div class="box-logo-head">
-                    <img src="grafika/logoH-01.png" alt="MOOD logo lielais" />
-                </div>
-                <div class="box-txt-head">
-                    <p>
-                        Mēs ticam, ka esam paveikuši savu darbu labi, ja klients iegūst efektīvu un viegli lietojamu instrumentu – vai tas būtu mājas lapas prototips, makets, logotips – kas palīdz sasniegt nepieciešamo rezultātu – pārdot preci, izglītot, izklaidēt vai informēt
-                    </p>
-                </div>
-                <div class="box-socicons-head">
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                </div>
+        <div class="box-section cf">
+
+
+            <div class="box-buttons-ring">
+                <script>
+                    createBtnRing(headBackgrounds.length);
+                </script>
             </div>
+            <div class="box-logo-head">
+                <img src="grafika/logoH-01.png" alt="MOOD logo lielais" />
+            </div>
+            <div class="box-txt-head">
+                <p>
+                    Mēs ticam, ka esam paveikuši savu darbu labi, ja klients iegūst efektīvu un viegli lietojamu instrumentu – vai tas būtu mājas lapas prototips, makets, logotips – kas palīdz sasniegt nepieciešamo rezultātu – pārdot preci, izglītot, izklaidēt vai informēt
+                </p>
+            </div>
+            <div class="box-socicons-head">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="box-slide-all">
+            <script>
+                for (var i = 0; i < headBackgrounds.length; i++) {
+                    document.write('<div class="box-slide" style="background-image: url(' + headBackgrounds[i].image + ');\
+background-color: rgba(' + headBackgrounds[i].toneRGB + ', 1)">\
+<div class="box-slide-tone"  style="background-color: rgba(' + headBackgrounds[i].toneRGB + ', .3)">\
+</div></div>')
+                }
+            </script>
         </div>
     </div>
     <!-- Sarkanais 1.bloks beigas -->
@@ -145,25 +155,25 @@
     <!-- Zaļais 2.bloks (fotogalerija) sākums -->
     <div id="galerija" class="box-gallery">
         <div class="box-tone">
-          <div class="box-slide-all">
+            <div class="box-slide-all">
                 <script>
-                var ii = 0;
-                for (var i = 0; i < workItems.length; i++) {
-                    if (ii === 0) document.write('<div class="box-slide">')
-                    ii += 1
+                    var ii = 0;
+                    for (var i = 0; i < workItems.length; i++) {
+                        if (ii === 0) document.write('<div class="box-slide">')
+                        ii += 1
                         document.write('<a href="#"><div class="box-foto">\
-                        <div class="box-hover"><div class="box-ringtxt">\
-                        <div class="box-ring cf"><span><span><span><span></span></span></span></span></div>\
-                        ' + workItems[i].title + '<span class="txt-foto">Fotogrāfija</span></div></div>\
-                        <img src="' + workItems[i].image + '" alt="foto-0' + workItems[i].catid + '" /></div></a>')
-                        if (ii === WORK_ITEMS_DEMO_COUNT || i === workItems.length -1) {
+<div class="box-hover"><div class="box-ringtxt">\
+<div class="box-ring cf"><span><span><span><span></span></span></span></span></div>\
+' + workItems[i].title + '<span class="txt-foto">Fotogrāfija</span></div></div>\
+<img src="' + workItems[i].image + '" alt="foto-0' + workItems[i].catid + '" /></div></a>')
+                        if (ii === WORK_ITEMS_DEMO_COUNT || i === workItems.length - 1) {
                             document.write('</div>');
                             ii = 0;
                         }
                     }
                 </script>
-              </div>
             </div>
+        </div>
     </div>
     <!-- Zaļais 2.bloks (fotogalerija) beigas -->
 
@@ -267,22 +277,22 @@
                         ii += 1
                         document.write(
                             '<div class="box-descrption">\
-                            <div class="box-foto">\
-                            <div class="box-fotohover">\
-                            <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>\
-                            <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>\
-                            <div class="box-socicons">\
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>\
-                            <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>\
-                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>\
-                            </div>\
-                            </div>\
-                            <img src="' + teamItems[i].image + '" alt="foto ' + teamItems[i].name + ' (' + teamItems[i].office + ')" />\
-                            </div>\
-                            <span class="txt-name">' + teamItems[i].name + '</span>\
-                            <span class="txt-office">' + teamItems[i].office + '</span>\
-                            </div>')
-                            if (ii === TEAM_ITEMS_DEMO_COUNT || i === teamItems.length -1) {
+<div class="box-foto">\
+<div class="box-fotohover">\
+<span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>\
+<span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>\
+<div class="box-socicons">\
+<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>\
+<a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>\
+<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>\
+</div>\
+</div>\
+<img src="' + teamItems[i].image + '" alt="foto ' + teamItems[i].name + ' (' + teamItems[i].office + ')" />\
+</div>\
+<span class="txt-name">' + teamItems[i].name + '</span>\
+<span class="txt-office">' + teamItems[i].office + '</span>\
+</div>')
+                        if (ii === TEAM_ITEMS_DEMO_COUNT || i === teamItems.length - 1) {
                             document.write('</div>');
                             ii = 0;
                         }

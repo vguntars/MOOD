@@ -118,7 +118,7 @@ width: 1282px;*/
 /*Peldošā izvēlne sākums*/
 
 .box-top-navi {
-    background-color: rgba(211, 53, 35, .9);
+    background-color: rgba(211, 53, 35, .95);
     font-size: 14px;
     font-weight: 300;
     position: fixed;
@@ -126,6 +126,7 @@ width: 1282px;*/
     left: 0;
     right: 0;
     z-index: 100;
+    transition: background-color .8s;
 }
 
 .box-top-navi .box-right {
@@ -164,12 +165,12 @@ width: 1282px;*/
     text-align: center;
 }
 
-.box-top-navi ul a:hover, .hover-navi {
-    border-top-color: rgba(255, 255, 255, .7);
+.box-top-navi ul a:hover {
+    border-top-color: rgba(255, 255, 255, .4);
 }
 
 .box-top-navi ul a.hover-navi {
-    border-top-color: rgba(255, 255, 255, .7);
+    border-top-color: rgba(255, 255, 255, .8);
 }
 
 
@@ -179,17 +180,11 @@ width: 1282px;*/
 /*Sarkanais 1.bloks sākums*/
 
 .box-head {
-    background-color: rgba(211, 53, 35, 1);
-    background-image: url("../grafika/REDbg-01.png");
-    background-size: cover;
-}
-
-.box-head .box-tone {
-    background-color: rgba(211, 53, 35, .3);
+    position: relative;
 }
 
 .box-head .box-section {
-    position: relative;
+  /*background-color: rgba(0,0,0,.3);*/
 }
 
 .box-head .box-buttons-ring {
@@ -198,7 +193,6 @@ width: 1282px;*/
     position: absolute;
     right: 80px;
     top: 50%;
-    /*transform: translate(0, -50%);*/
 }
 
 .box-head .box-logo-head {
@@ -234,6 +228,25 @@ width: 1282px;*/
     color: rgba(255, 255, 255, 1);
 }
 
+.box-head .box-slide-all {
+position: absolute;
+top: 0;
+left: 0;
+right: 0px;
+height: 100%;
+z-index: -10;
+}
+
+.box-head .box-slide {
+  background-size: cover;
+  height: 100%;
+  /*transition: transform .25s ease-in-out;*/
+  transition: transform .7s;
+}
+
+.box-head .box-slide-tone {
+  height: 100%;
+}
 
 /*Sarkanais 1.bloks beigas*/
 
@@ -352,7 +365,8 @@ width: 1282px;*/
     flex: 0 0 100%;
     width: 100%;
     font-size: 0;
-    transition: transform .25s ease-in-out;
+    /*transition: transform .25s ease-in-out;*/
+    transition: transform .5s;
 }
 
 .box-gallery .box-foto {
@@ -545,7 +559,8 @@ width: 1282px;*/
     flex: 0 0 100%;
     width: 100%;
     font-size: 0;
-    transition: transform .25s ease-in-out;
+    /*transition: transform .25s ease-in-out;*/
+    transition: transform .5s ;
 }
 
 .box-team .box-descrption {

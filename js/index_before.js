@@ -1,6 +1,16 @@
 //
-var WORK_ITEMS_DEMO_COUNT = 8;
+var headBackgrounds = [{
+  image: "grafika/REDbg-01.png",
+  toneRGB: "211, 53, 35"
+}, {
+  image: "grafika/GREENBg.png",
+  toneRGB: "87, 170, 104"
+}, {
+  image: "grafika/BLUEbg.png",
+  toneRGB: "46, 45, 107"
+}];
 
+const WORK_ITEMS_DEMO_COUNT = 8;
 var workItems = [{
     catid: 2,
     title: "Proin gravida nibh vel velit",
@@ -42,8 +52,6 @@ var workItems = [{
     slug: "fotogalerija",
     image: "foto/photo-08.png"
 }
-
-
 ,{
     catid: 9,
     title: "Proin gravida nibh vel velit",
@@ -92,8 +100,7 @@ var workItems = [{
 }
 ]
 
-var TEAM_ITEMS_DEMO_COUNT = 4;
-
+const TEAM_ITEMS_DEMO_COUNT = 4;
 var teamItems = [{
     catid: 1,
     name: "Jānis Pirmais",
