@@ -48,7 +48,7 @@
             </div>
             <div class="box-txt-head">
                 <p>
-                    Mēs ticam, ka esam paveikuši savu darbu labi, ja klients iegūst efektīvu un viegli lietojamu instrumentu – vai tas būtu mājas lapas prototips, makets, logotips – kas palīdz sasniegt nepieciešamo rezultātu – pārdot preci, izglītot, izklaidēt vai informēt
+                  Mēs ticam, ka esam paveikuši savu darbu labi, ja klients iegūst efektīvu un viegli lietojamu instrumentu – vai tas būtu mājas lapas prototips, makets, logotips – kas palīdz sasniegt nepieciešamo rezultātu – pārdot preci, izglītot, izklaidēt vai informēt
                 </p>
             </div>
             <div class="box-socicons-head">
@@ -82,7 +82,7 @@ background-color: rgba(' + headBackgrounds[i].toneRGB + ', 1)">\
                     </div>
                     <h4>Grafiskais dizains</h4>
                     <p>
-                        Veicam plašu darbu klāstu gan jauniem uzņēmumiem (firmas stila un logo izstrāde, zīmogs, vizītkartes), gan arī apkalpojam uzņēmumu ikdienas reklāmas vajadzībām
+                      Veicam plašu darbu klāstu gan jauniem uzņēmumiem (firmas stila un logo izstrāde, zīmogs, vizītkartes), gan arī apkalpojam uzņēmumu ikdienas reklāmas vajadzībām
                     </p>
                 </div>
                 <!-- 2 -->
@@ -139,14 +139,8 @@ background-color: rgba(' + headBackgrounds[i].toneRGB + ', 1)">\
                     </script>
                 </div>
                 <div class="box-buttons-ring">
-                    <script>
-                        var btnCount = 0
-                        btnCount = parseInt(workItems.length / WORK_ITEMS_DEMO_COUNT)
-                        if (workItems.length % WORK_ITEMS_DEMO_COUNT) btnCount++
-                            createBtnRing(btnCount)
-                    </script>
+                <!-- bumbuļi lādējas beigās kopā ar galeriju -->
                 </div>
-
             </div>
         </div>
     </div>
@@ -156,22 +150,7 @@ background-color: rgba(' + headBackgrounds[i].toneRGB + ', 1)">\
     <div id="galerija" class="box-gallery">
         <div class="box-tone">
             <div class="box-slide-all">
-                <script>
-                    var ii = 0;
-                    for (var i = 0; i < workItems.length; i++) {
-                        if (ii === 0) document.write('<div class="box-slide">')
-                        ii += 1
-                        document.write('<a href="#"><div class="box-foto">\
-<div class="box-hover"><div class="box-ringtxt">\
-<div class="box-ring cf"><span><span><span><span></span></span></span></span></div>\
-' + workItems[i].title + '<span class="txt-foto">Fotogrāfija</span></div></div>\
-<img src="' + workItems[i].image + '" alt="foto-0' + workItems[i].catid + '" /></div></a>')
-                        if (ii === WORK_ITEMS_DEMO_COUNT || i === workItems.length - 1) {
-                            document.write('</div>');
-                            ii = 0;
-                        }
-                    }
-                </script>
+            <!--  galerija lādējas beigās-->
             </div>
         </div>
     </div>
@@ -277,21 +256,16 @@ background-color: rgba(' + headBackgrounds[i].toneRGB + ', 1)">\
                         ii += 1
                         document.write(
                             '<div class="box-descrption">\
-<div class="box-foto">\
-<div class="box-fotohover">\
+<div class="box-foto"><div class="box-fotohover">\
 <span class="txt-foto1">Proin gravida nibh vel velit auctor aliquet</span>\
 <span class="txt-foto2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit</span>\
 <div class="box-socicons">\
 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>\
 <a href="#"><i class="fa fa-facebook"  style="font-size: 24px" aria-hidden="true"></i></a>\
-<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>\
-</div>\
-</div>\
-<img src="' + teamItems[i].image + '" alt="foto ' + teamItems[i].name + ' (' + teamItems[i].office + ')" />\
-</div>\
+<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></div></div>\
+<img src="' + teamItems[i].image + '" alt="foto ' + teamItems[i].name + ' (' + teamItems[i].office + ')" /></div>\
 <span class="txt-name">' + teamItems[i].name + '</span>\
-<span class="txt-office">' + teamItems[i].office + '</span>\
-</div>')
+<span class="txt-office">' + teamItems[i].office + '</span></div>')
                         if (ii === TEAM_ITEMS_DEMO_COUNT || i === teamItems.length - 1) {
                             document.write('</div>');
                             ii = 0;
@@ -342,6 +316,11 @@ background-color: rgba(' + headBackgrounds[i].toneRGB + ', 1)">\
     <script src="js/index_scroll.js"></script>
     <script src="js/index_form_valid.js"></script>
     <script src="js/index_slide.js"></script>
+    <script src="js/index_sort.js"></script>
+    <script>
+      //galerijas ielāde
+      ItemsSort(-1, $('#galerija .box-slide-all'), $('#darbi .box-buttons-ring'));
+    </script>
 </body>
 
 </html>

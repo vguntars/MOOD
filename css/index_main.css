@@ -118,7 +118,7 @@ width: 1282px;*/
 /*Peldošā izvēlne sākums*/
 
 .box-top-navi {
-    background-color: rgba(211, 53, 35, .95);
+    background-color: rgba(211, 53, 35, .9);
     font-size: 14px;
     font-weight: 300;
     position: fixed;
@@ -235,12 +235,12 @@ left: 0;
 right: 0px;
 height: 100%;
 z-index: -10;
+overflow: hidden;
 }
 
 .box-head .box-slide {
   background-size: cover;
   height: 100%;
-  /*transition: transform .25s ease-in-out;*/
   transition: transform .7s;
 }
 
@@ -365,8 +365,7 @@ z-index: -10;
     flex: 0 0 100%;
     width: 100%;
     font-size: 0;
-    /*transition: transform .25s ease-in-out;*/
-    transition: transform .5s;
+    transition: transform .5s, opacity .3s ease-in;
 }
 
 .box-gallery .box-foto {
@@ -389,6 +388,7 @@ z-index: -10;
     position: absolute;
     background-color: rgba(87, 170, 104, .7);
     opacity: 0;
+    transition: opacity .3s ease-out;
 }
 
 .box-gallery .box-foto:hover .box-hover {
@@ -559,7 +559,6 @@ z-index: -10;
     flex: 0 0 100%;
     width: 100%;
     font-size: 0;
-    /*transition: transform .25s ease-in-out;*/
     transition: transform .5s ;
 }
 
@@ -591,7 +590,7 @@ z-index: -10;
     padding: 20px 20px;
     position: absolute;
     background-color: rgba(87, 170, 104, .7);
-    visibility: hidden;
+    opacity : 0;
     line-height: 1.35;
 }
 
@@ -611,7 +610,8 @@ z-index: -10;
 }
 
 .box-team .box-foto:hover .box-fotohover {
-    visibility: visible;
+    opacity : 1;
+    transition: opacity .3s ease-out;
 }
 
 .box-team .box-socicons {

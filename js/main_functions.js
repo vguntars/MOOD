@@ -14,3 +14,7 @@ function $(selector) {
 function $$(selector) {
     return [].slice.call(document.querySelectorAll(selector));
 }
+
+function _removeAllChild(parentElement) {
+  while (parentElement.hasChildNodes()) parentElement.removeChild(parentElement.lastChild);
+}

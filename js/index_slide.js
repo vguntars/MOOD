@@ -6,17 +6,19 @@ for (var i in headSlideBtns) {
         e && e.preventDefault();
         var idx = headSlideBtns.indexOf(this);
         slideTo(idx, headSlideBtns, headSlides, true);
-        $('.box-top-navi').style.backgroundColor='rgba(' + headBackgrounds[idx].toneRGB + ', .95)';
+        $('.box-top-navi').style.backgroundColor = 'rgba(' + headBackgrounds[idx].toneRGB + ', .9)';
     }
 }
 
 //fotogalerija
-var workSlideBtns = $$('#darbi .box-buttons-ring button')
-var workSlides = $$('#galerija .box-slide')
-for (var i in workSlideBtns) {
-    workSlideBtns[i].onclick = function(e) {
-        e && e.preventDefault();
-        slideTo(workSlideBtns.indexOf(this), workSlideBtns, workSlides);
+function workSlideBtnsOnClick() {
+    var workSlideBtns = $$('#darbi .box-buttons-ring button')
+    var workSlides = $$('#galerija .box-slide')
+    for (var i in workSlideBtns) {
+        workSlideBtns[i].onclick = function(e) {
+            e && e.preventDefault();
+            slideTo(workSlideBtns.indexOf(this), workSlideBtns, workSlides);
+        }
     }
 }
 //darbinieku bildes
